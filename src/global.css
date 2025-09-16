@@ -1,4 +1,12 @@
 @import "tailwindcss";
+/* TODO: import fonts */
+@theme {
+	--color-bg-color: rgb(5, 91, 166);
+	--color-fg-color: rgb(61, 155, 233);
+	--color-accent-color: rgb(255, 192, 58);
+	--font-text: Poppins, sans-serif;
+	--font-header: Poppins, sans-serif;
+}
 
 button, a {
 	cursor: pointer;

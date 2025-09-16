@@ -5,7 +5,7 @@ import { toTitleCase } from "./utils";
 // TODO: add wix api calls - this file is all dummy info rn
 const dummyArticle = () => ({
   title: toTitleCase(faker.lorem.sentence()),
-  excerpt: faker.lorem.sentences(2),
+  excerpt: faker.lorem.sentences(4),
   url: faker.internet.url(),
 });
 const dummyFeaturedArticles: {

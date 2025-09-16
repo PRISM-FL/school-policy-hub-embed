@@ -21,12 +21,15 @@ export function TabContainer({
   ...props
 }: Props) {
   return (
-    <div {...props}>
-      <div role="tablist" className="flex flex-row border-b border-black">
+    <div className="bg-bg-color p-2 rounded-lg" {...props}>
+      <div role="tablist" className="flex flex-row text-white">
         {tabs.map(({ label }, index) => (
           <button
             onClick={() => setActiveTab(index)}
-            className="border border-b-0 border-black p-1"
+            className={[
+              "rounded-t-lg text-xs font-bold font-header flex-1 p-4",
+              activeTab === index ? "bg-accent-color" : "bg-fg-color",
+            ].join(" ")}
             key={index}
             id={`${label}-tab`}
             aria-selected={activeTab === index ? "true" : "false"}
