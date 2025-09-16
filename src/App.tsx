@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { TabContainer } from "./components/TabContainer";
 import { AudiencePanel } from "./components/AudiencePanel";
-import type { PolicyHubArticle, PolicyHubAudience } from "./types";
-import { getFeaturedArticles, getRecentArticles } from "./lib/api";
+import type { PolicyHubArticle } from "./types";
+import { getFeaturedArticles } from "./lib/api";
 
 function App() {
   const [activeTab, setActiveTab] = useState(0);
