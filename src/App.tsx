@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { TabContainer } from "./components/TabContainer";
 import { AudiencePanel } from "./components/AudiencePanel";
 import type { PolicyHubArticle } from "./types";
-import { getFeaturedArticles } from "./lib/api";
+import { getFeaturedArticles, getRecentArticles } from "./lib/api";
+import { RecentResources } from "./components/RecentResources";
 
 function App() {
   const [activeTab, setActiveTab] = useState(0);
@@ -15,6 +16,10 @@ function App() {
   >();
   const [teacherArticles, setTeacherArticles] = useState<
     [PolicyHubArticle, PolicyHubArticle] | null
+  >();
+
+  const [recentArticles, setRecentArticles] = useState<
+    [PolicyHubArticle, PolicyHubArticle, PolicyHubArticle] | null
   >();
 
   useEffect(() => {
@@ -33,10 +38,16 @@ function App() {
       .catch((err) => {
         console.error(err);
       });
+
+    getRecentArticles()
+      .then(setRecentArticles)
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col">
       <TabContainer
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -76,7 +87,10 @@ function App() {
           },
         ]}
       />
-    </>
+      <div className="bg-bg-color p-2 rounded-b-lg">
+        <RecentResources articles={recentArticles} />
+      </div>
+    </div>
   );
 }
 

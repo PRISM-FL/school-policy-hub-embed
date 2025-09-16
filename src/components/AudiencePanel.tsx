@@ -28,13 +28,13 @@ export function AudiencePanel({
           <div className="mb-1">
             <img src={image} alt="dummy image" />
           </div>
-          <h1 className="text-3xl font-bold pb-1 mb-2 border-b-2 border-black">
+          <h1 className="text-3xl font-header font-bold pb-1 mb-2 border-b-2 border-black">
             {title}
           </h1>
           <p className="font-bold text-sm">{description}</p>
         </div>
         <div>
-          <h2 className="font-bold text-2xl pb-1 mb-2 border-b-2 border-black">
+          <h2 className="font-bold font-header text-2xl pb-1 mb-2 border-b-2 border-black">
             Recommended Resources
           </h2>
           <div className="flex flex-col gap-4">
@@ -49,7 +49,7 @@ export function AudiencePanel({
                 <article key={url} className="flex flex-col text-white">
                   <a className="w-full h-full bg-fg-color p-2" href={url}>
                     <header className="border-b-2 border-white pb-1 mb-1">
-                      <h3 className="text-xl font-bold">{title}</h3>
+                      <h3 className="text-xl font-header font-bold">{title}</h3>
                     </header>
                     <p>{excerpt}</p>
                   </a>
