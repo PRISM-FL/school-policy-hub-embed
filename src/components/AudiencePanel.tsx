@@ -31,7 +31,7 @@ export function AudiencePanel({
           <h1 className="text-3xl font-header font-bold pb-1 mb-2 border-b-2 border-black">
             {title}
           </h1>
-          <p className="font-bold text-sm">{description}</p>
+          <p className="font-medium font-header">{description}</p>
         </div>
         <div>
           <h2 className="font-bold font-header text-2xl pb-1 mb-2 border-b-2 border-black">
