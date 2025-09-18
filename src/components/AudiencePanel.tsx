@@ -46,7 +46,7 @@ export function AudiencePanel({
             )}
             {articles &&
               articles.map(({ title, excerpt, url }) => (
-                <article key={url} className="flex flex-col text-white">
+                <article key={title + url} className="flex flex-col text-white">
                   <a className="w-full h-full bg-fg-color p-2" href={url}>
                     <header className="border-b-2 border-white pb-1 mb-1">
                       <h3 className="text-xl font-header font-bold">{title}</h3>
