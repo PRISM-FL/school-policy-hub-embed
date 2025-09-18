@@ -57,8 +57,10 @@ export async function getFeaturedArticles(
   limit?: number,
 ): Promise<PolicyHubArticle[] | null> {
   const articles = await getAllPolicyHubArticles();
-  const audienceArticles = articles.filter((article) =>
-    article.categoryIds?.includes(postCategories[audience]),
+  const audienceArticles = articles.filter(
+    (article) =>
+      article.categoryIds?.includes(postCategories[audience]) &&
+      article.featured,
   );
 
   return audienceArticles
