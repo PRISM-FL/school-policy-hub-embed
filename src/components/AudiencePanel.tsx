@@ -21,7 +21,7 @@ export function AudiencePanel({
   return (
     <div {...props} className="bg-accent-color p-2">
       <div
-        className="p-4"
+        className="p-4 pb-16"
         style={{ backgroundImage: `url(${ruledBg})`, backgroundSize: "300px" }}
       >
         <div>

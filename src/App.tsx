@@ -4,6 +4,7 @@ import { AudiencePanel } from "./components/AudiencePanel";
 import type { PolicyHubArticle } from "./types";
 import { getFeaturedArticles, getRecentArticles } from "./lib/api";
 import { RecentResources } from "./components/RecentResources";
+import { BinderRings } from "./components/BinderRings";
 
 function App() {
   const [activeTab, setActiveTab] = useState(0);
@@ -87,6 +88,7 @@ function App() {
           },
         ]}
       />
+      <BinderRings />
       <div className="bg-bg-color p-2 rounded-b-lg">
         <RecentResources articles={recentArticles} />
       </div>

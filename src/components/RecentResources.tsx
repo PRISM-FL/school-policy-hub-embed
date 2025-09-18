@@ -10,7 +10,7 @@ export function RecentResources({ articles, ...props }: Props) {
   return (
     <div className="bg-accent-color p-2" {...props}>
       <div
-        className="w-full h-full p-4"
+        className="w-full h-full p-4 pt-16"
         style={{ backgroundImage: `url(${ruledBg})`, backgroundSize: "300px" }}
       >
         {" "}
