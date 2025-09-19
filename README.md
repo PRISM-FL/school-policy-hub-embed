@@ -1,8 +1,8 @@
 #### dummy ver (waiting for perms)
 - [x] implement recent resources
-- [ ] add binder prongs
-- [ ] add tape decoration to images
-- [ ] implement poppins for header
-- [ ] implement museo slab for text
-- [ ] test on testpage
+- [x] add binder prongs
+- [x] add tape decoration to images
+-[x] implement poppins for header
+- [x] implement museo slab for text
+- [x] test on testpage
 
