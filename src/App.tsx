@@ -9,18 +9,18 @@ import { BinderRings } from "./components/BinderRings";
 function App() {
   const [activeTab, setActiveTab] = useState(0);
   const [studentArticles, setStudentArticles] = useState<
-    [PolicyHubArticle, PolicyHubArticle] | null
+    PolicyHubArticle[] | null
   >();
 
   const [parentArticles, setParentArticles] = useState<
-    [PolicyHubArticle, PolicyHubArticle] | null
+    PolicyHubArticle[] | null
   >();
   const [teacherArticles, setTeacherArticles] = useState<
-    [PolicyHubArticle, PolicyHubArticle] | null
+    PolicyHubArticle[] | null
   >();
 
   const [recentArticles, setRecentArticles] = useState<
-    [PolicyHubArticle, PolicyHubArticle, PolicyHubArticle] | null
+    PolicyHubArticle[] | null
   >();
 
   useEffect(() => {

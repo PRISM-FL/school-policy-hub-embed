@@ -1,7 +1,4 @@
 import type { PolicyHubArticle, PolicyHubAudience } from "../types";
-import { faker } from "@faker-js/faker";
-import { toTitleCase } from "./utils";
-
 import { items } from "@wix/data";
 import { posts } from "@wix/blog";
 import { createClient, OAuthStrategy } from "@wix/sdk";
@@ -31,26 +28,6 @@ async function getAllPolicyHubArticles() {
   policyHubArticles = items;
   return items;
 }
-
-// TODO: add wix api calls - this file is all dummy info rn
-const dummyArticle = () => ({
-  title: toTitleCase(faker.lorem.sentence()),
-  excerpt: faker.lorem.sentences(4),
-  url: faker.internet.url(),
-});
-
-const dummyFeaturedArticles: {
-  [audience in PolicyHubAudience]: [PolicyHubArticle, PolicyHubArticle];
-} = {
-  students: [dummyArticle(), dummyArticle()],
-  parents: [dummyArticle(), dummyArticle()],
-  teachers: [dummyArticle(), dummyArticle()],
-};
-const dummyRecentArticles: [
-  PolicyHubArticle,
-  PolicyHubArticle,
-  PolicyHubArticle,
-] = [dummyArticle(), dummyArticle(), dummyArticle()];
 
 export async function getFeaturedArticles(
   audience: PolicyHubAudience,

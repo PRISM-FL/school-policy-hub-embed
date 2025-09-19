@@ -7,7 +7,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
   // id: string;
   image: string;
   description: string;
-  articles?: [PolicyHubArticle, PolicyHubArticle] | null;
+  articles?: PolicyHubArticle[] | null;
 }
 
 export function AudiencePanel({

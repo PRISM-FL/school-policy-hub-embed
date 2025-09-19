@@ -3,7 +3,7 @@ import ruledBg from "../assets/ruled-bg.png";
 import type { HTMLAttributes } from "react";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
-  articles?: [PolicyHubArticle, PolicyHubArticle, PolicyHubArticle] | null;
+  articles?: PolicyHubArticle[] | null;
 }
 
 export function RecentResources({ articles, ...props }: Props) {
