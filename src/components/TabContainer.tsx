@@ -21,7 +21,7 @@ export function TabContainer({
   ...props
 }: Props) {
   return (
-    <div className="bg-bg-color p-2 rounded-t-lg" {...props}>
+    <div className="bg-bg-color p-2 rounded-t-lg flex-1 h-[60vh]" {...props}>
       <div role="tablist" className="flex flex-row text-white">
         {tabs.map(({ label }, index) => (
           <button

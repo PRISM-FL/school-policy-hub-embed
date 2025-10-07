@@ -17,6 +17,10 @@ const wixClient = createClient({
 });
 
 let policyHubArticles: undefined | posts.Post[] = undefined;
+function slugToUrl(slug: string) {
+  return `https://prismfl.org/post/${slug}`;
+}
+
 async function getAllPolicyHubArticles() {
   if (policyHubArticles) {
     return policyHubArticles;
@@ -40,11 +44,12 @@ export async function getFeaturedArticles(
       article.featured,
   );
 
+  console.log(audienceArticles);
   return audienceArticles
     .map((article) => ({
       title: article.title ?? "Not Found",
       excerpt: article.excerpt ?? "Not Found",
-      url: article.url ?? "https//prismfl.org/404",
+      url: slugToUrl(article.slug ?? "404"),
     }))
     .slice(0, limit ?? 2);
 }
@@ -62,7 +67,7 @@ export async function getRecentArticles(
     .map((article) => ({
       title: article.title ?? "Not Found",
       excerpt: article.excerpt ?? "Not Found",
-      url: article.url ?? "https//prismfl.org/404",
+      url: slugToUrl(article.slug ?? "404"),
     }));
 
   return recentArticles.slice(0, limit ?? 3);

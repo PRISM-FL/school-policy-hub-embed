@@ -8,16 +8,16 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 export function RecentResources({ articles, ...props }: Props) {
   return (
-    <div className="bg-accent-color p-2" {...props}>
+    <div className="bg-accent-color p-2 h-[60vh] " {...props}>
       <div
-        className="w-full h-full p-4 pt-16"
+        className="w-full h-full p-4 pt-16 flex flex-col"
         style={{ backgroundImage: `url(${ruledBg})`, backgroundSize: "300px" }}
       >
         {" "}
         <h1 className="text-center text-3xl font-header font-bold mb-4">
           Recently Updated
         </h1>
-        <div className="flex md:flex-row flex-col justify-between  items-center gap-4">
+        <div className="flex md:flex-row flex-col justify-between items-center gap-4 flex-1">
           {!articles && (
             <p>
               Could not load recommended resources. Please refresh the page and
@@ -26,7 +26,10 @@ export function RecentResources({ articles, ...props }: Props) {
           )}
           {articles &&
             articles.map(({ title, excerpt, url }) => (
-              <article key={title + url} className="flex flex-col text-white">
+              <article
+                key={title + url}
+                className="flex flex-col text-white h-full"
+              >
                 <a className="w-full h-full bg-fg-color p-2" href={url}>
                   <header className="border-b-2 border-white pb-1 mb-1">
                     <h3 className="text-xl font-header font-bold">{title}</h3>

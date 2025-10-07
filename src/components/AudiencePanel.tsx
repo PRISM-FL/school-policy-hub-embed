@@ -21,10 +21,10 @@ export function AudiencePanel({
   return (
     <div {...props} className="bg-accent-color p-2">
       <div
-        className="p-4 pb-16"
+        className="p-4 pb-16 md:flex md:flex-row gap-4"
         style={{ backgroundImage: `url(${ruledBg})`, backgroundSize: "300px" }}
       >
-        <div>
+        <div className="flex-1">
           <div className="mb-1">
             <img src={image} alt="dummy image" />
           </div>
@@ -33,11 +33,11 @@ export function AudiencePanel({
           </h1>
           <p className="font-medium font-header">{description}</p>
         </div>
-        <div>
+        <div className="flex flex-col flex-1">
           <h2 className="font-bold font-header text-2xl pb-1 mb-2 border-b-2 border-black">
             Recommended Resources
           </h2>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:flex-1">
             {!articles && (
               <p>
                 Could not load recommended resources. Please refresh the page
@@ -46,7 +46,10 @@ export function AudiencePanel({
             )}
             {articles &&
               articles.map(({ title, excerpt, url }) => (
-                <article key={title + url} className="flex flex-col text-white">
+                <article
+                  key={title + url}
+                  className="flex flex-col text-white md:flex-1"
+                >
                   <a className="w-full h-full bg-fg-color p-2" href={url}>
                     <header className="border-b-2 border-white pb-1 mb-1">
                       <h3 className="text-xl font-header font-bold">{title}</h3>

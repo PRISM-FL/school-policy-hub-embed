@@ -22,4 +22,10 @@ html {
 button,
 a {
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+a:hover,
+button:hover {
+  filter: brightness(110%);
 }
