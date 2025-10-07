@@ -48,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col m-auto max-w-[980px]">
       <TabContainer
         activeTab={activeTab}
         setActiveTab={setActiveTab}

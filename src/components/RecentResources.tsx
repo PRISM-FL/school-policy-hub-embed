@@ -8,7 +8,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 export function RecentResources({ articles, ...props }: Props) {
   return (
-    <div className="bg-accent-color p-2 md:h-[60vh] " {...props}>
+    <div className="bg-accent-color p-2 md:h-[500px] " {...props}>
       <div
         className="w-full h-full p-4 pt-16 flex flex-col"
         style={{ backgroundImage: `url(${ruledBg})`, backgroundSize: "300px" }}
