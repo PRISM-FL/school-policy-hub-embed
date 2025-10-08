@@ -1,8 +1,9 @@
-#### dummy ver (waiting for perms)
-- [x] implement recent resources
-- [x] add binder prongs
-- [x] add tape decoration to images
--[x] implement poppins for header
-- [x] implement museo slab for text
-- [x] test on testpage
+# School Policy Hub Embed
+
+## Tasks
+- [ ] Adjust excerpt length and add ellipses character
+- [ ] make notebook paper bg image bigger
+- [ ] blog category colors
+
+
 
