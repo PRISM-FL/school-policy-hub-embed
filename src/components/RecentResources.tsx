@@ -1,6 +1,8 @@
 import type { PolicyHubArticle } from "../types";
 import ruledBg from "../assets/ruled-bg.png";
 import type { HTMLAttributes } from "react";
+import { ellipsify } from "../lib/format";
+import { resourceCharacterLimit } from "../config";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   articles?: PolicyHubArticle[] | null;
@@ -34,7 +36,7 @@ export function RecentResources({ articles, ...props }: Props) {
                   <header className="border-b-2 border-white pb-1 mb-1">
                     <h3 className="text-xl font-header font-bold">{title}</h3>
                   </header>
-                  <p>{excerpt}</p>
+                  <p>{ellipsify(excerpt, resourceCharacterLimit)}</p>
                 </a>
               </article>
             ))}

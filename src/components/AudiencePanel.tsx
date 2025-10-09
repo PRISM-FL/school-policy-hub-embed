@@ -1,6 +1,8 @@
 import type { HTMLAttributes } from "react";
 import type { PolicyHubArticle } from "../types";
 import ruledBg from "../assets/ruled-bg.png";
+import { ellipsify } from "../lib/format";
+import { excerptCharacterLimit } from "../config";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -31,7 +33,7 @@ export function AudiencePanel({
           <h1 className="text-3xl font-header font-bold pb-1 mb-2 border-b-2 border-black">
             {title}
           </h1>
-          <p className="font-medium font-header">{description}</p>
+          <p className="font-medium">{description}</p>
         </div>
         <div className="flex flex-col flex-1">
           <h2 className="font-bold font-header text-2xl pb-1 mb-2 border-b-2 border-black">
@@ -54,7 +56,7 @@ export function AudiencePanel({
                     <header className="border-b-2 border-white pb-1 mb-1">
                       <h3 className="text-xl font-header font-bold">{title}</h3>
                     </header>
-                    <p>{excerpt}</p>
+                    <p>{ellipsify(excerpt, excerptCharacterLimit)}</p>
                   </a>
                 </article>
               ))}

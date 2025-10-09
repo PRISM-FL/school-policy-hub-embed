@@ -70,7 +70,7 @@ function App() {
               <AudiencePanel
                 title="For Teachers"
                 image="https://static.wixstatic.com/media/9eef37_fa00e4788a8d4ec4a1b090234a85d465~mv2.jpg/v1/fill/w_850,h_396,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/adam-winger-UFG04g43hqs-unsplash.jpg"
-                description="We provide guidance for supporting LGBTQ+ students while meeting your legal and professional responsibilities. It covers what the law says, how to handle sensitive topics, and ways to create an inclusive environment within the boundaries of district policy and state law."
+                description="We provide guidance for supporting LGBTQ+ students while meeting your legal and professional responsibilities. It covers what the law says, how to handle sensitive topics, and ways to create an inclusive environment within the boundaries of district policy, state law, and professional ethics."
                 articles={teacherArticles}
               />
             ),
