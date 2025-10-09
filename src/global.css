@@ -2,7 +2,7 @@
 /* TODO: import fonts */
 @font-face {
   font-family: "Museo Slab";
-  src: url("/fonts/Museo_Slab_500.otf") format("otf");
+  src: url("/fonts/Museo_Slab_300.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
