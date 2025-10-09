@@ -24,7 +24,10 @@ export function AudiencePanel({
     <div {...props} className="bg-accent-color p-2">
       <div
         className="p-4 pb-16 md:flex md:flex-row gap-4"
-        style={{ backgroundImage: `url(${ruledBg})`, backgroundSize: "300px" }}
+        style={{
+          backgroundImage: `url(${ruledBg})`,
+          backgroundSize: "700px",
+        }}
       >
         <div className="flex-1">
           <div className="mb-1">
