@@ -3,6 +3,7 @@ import ruledBg from "../assets/ruled-bg.png";
 import type { HTMLAttributes } from "react";
 import { ellipsify } from "../lib/format";
 import { resourceCharacterLimit } from "../config";
+import { Tape } from "./Tape";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   articles?: PolicyHubArticle[] | null;
@@ -30,8 +31,9 @@ export function RecentResources({ articles, ...props }: Props) {
             articles.map(({ title, excerpt, url }) => (
               <article
                 key={title + url}
-                className="flex flex-col text-white h-full"
+                className="flex flex-col text-white h-full relative"
               >
+                <Tape />
                 <a className="w-full h-full bg-fg-color p-2" href={url}>
                   <header className="border-b-2 border-white pb-1 mb-1">
                     <h3 className="text-xl font-header font-bold">{title}</h3>

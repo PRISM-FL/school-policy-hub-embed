@@ -3,6 +3,7 @@ import type { PolicyHubArticle } from "../types";
 import ruledBg from "../assets/ruled-bg.png";
 import { ellipsify } from "../lib/format";
 import { excerptCharacterLimit } from "../config";
+import { Tape } from "./Tape";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -53,8 +54,9 @@ export function AudiencePanel({
               articles.map(({ title, excerpt, url }) => (
                 <article
                   key={title + url}
-                  className="flex flex-col text-white md:flex-1"
+                  className="flex flex-col text-white md:flex-1 relative"
                 >
+                  <Tape />
                   <a className="w-full h-full bg-fg-color p-2" href={url}>
                     <header className="border-b-2 border-white pb-1 mb-1">
                       <h3 className="text-xl font-header font-bold">{title}</h3>
