@@ -54,10 +54,14 @@ export function AudiencePanel({
               articles.map(({ title, excerpt, url }) => (
                 <article
                   key={title + url}
-                  className="flex flex-col text-white md:flex-1 relative"
+                  className="flex flex-col text-white md:flex-1"
                 >
-                  <Tape />
-                  <a className="w-full h-full bg-fg-color p-2" href={url}>
+                  <a
+                    className="w-full h-full bg-fg-color p-2 relative"
+                    href={url}
+                  >
+                    <Tape />
+
                     <header className="border-b-2 border-white pb-1 mb-1">
                       <h3 className="text-xl font-header font-bold">{title}</h3>
                     </header>

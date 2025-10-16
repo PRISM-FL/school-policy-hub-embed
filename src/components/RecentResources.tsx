@@ -20,7 +20,7 @@ export function RecentResources({ articles, ...props }: Props) {
         <h1 className="text-center text-3xl font-header font-bold mb-4">
           Recently Updated
         </h1>
-        <div className="flex md:flex-row flex-col justify-between items-center gap-4 flex-1">
+        <div className="flex md:flex-row flex-col justify-between items-center gap-4 gap-y-10 flex-1">
           {!articles && (
             <p>
               Could not load recommended resources. Please refresh the page and
@@ -31,10 +31,14 @@ export function RecentResources({ articles, ...props }: Props) {
             articles.map(({ title, excerpt, url }) => (
               <article
                 key={title + url}
-                className="flex flex-col text-white h-full relative"
+                className="flex flex-col text-white h-full "
               >
-                <Tape />
-                <a className="w-full h-full bg-fg-color p-2" href={url}>
+                <a
+                  className="w-full h-full bg-fg-color p-2 relative"
+                  href={url}
+                >
+                  <Tape vertical />
+
                   <header className="border-b-2 border-white pb-1 mb-1">
                     <h3 className="text-xl font-header font-bold">{title}</h3>
                   </header>
