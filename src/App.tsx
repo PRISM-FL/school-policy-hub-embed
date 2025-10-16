@@ -48,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col m-auto max-w-[980px] drop-shadow-black drop-shadow-lg">
+    <div className="flex flex-col m-auto max-w-[980px] drop-shadow-black drop-shadow-lg p-4">
       <TabContainer
         activeTab={activeTab}
         setActiveTab={setActiveTab}
