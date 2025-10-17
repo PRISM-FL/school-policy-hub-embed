@@ -44,7 +44,6 @@ export async function getFeaturedArticles(
       article.featured,
   );
 
-  console.log(audienceArticles);
   return audienceArticles
     .map((article) => ({
       title: article.title ?? "Not Found",
