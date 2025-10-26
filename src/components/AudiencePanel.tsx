@@ -27,7 +27,7 @@ export function AudiencePanel({
         className="p-4 pb-16 md:flex md:flex-row gap-4"
         style={{
           backgroundImage: `url(${ruledBg})`,
-          backgroundSize: "700px",
+          backgroundSize: "1500px",
         }}
       >
         <div className="flex-1">

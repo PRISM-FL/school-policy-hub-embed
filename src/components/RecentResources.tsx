@@ -14,7 +14,7 @@ export function RecentResources({ articles, ...props }: Props) {
     <div className="bg-accent-color p-2 md:h-[500px] " {...props}>
       <div
         className="w-full h-full p-4 pt-16 flex flex-col"
-        style={{ backgroundImage: `url(${ruledBg})`, backgroundSize: "700px" }}
+        style={{ backgroundImage: `url(${ruledBg})`, backgroundSize: "1500px" }}
       >
         {" "}
         <h1 className="text-center text-3xl font-header font-bold mb-4">
